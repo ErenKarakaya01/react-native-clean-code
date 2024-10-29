@@ -60,7 +60,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
         <Text
           className="text-blue-500"
           onPress={() => {
-            router.push("/auth/register");
+            router.push("/register");
           }}
         >
           Create account

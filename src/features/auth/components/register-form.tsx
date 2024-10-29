@@ -69,7 +69,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         <Text
           className="text-blue-500"
           onPress={() => {
-            router.push("/auth/login");
+            router.push("/login");
           }}
         >
           Already have an account?
