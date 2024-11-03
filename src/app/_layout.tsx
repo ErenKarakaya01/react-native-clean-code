@@ -31,6 +31,8 @@ const RootLayout = () => {
     <AppProvider>
       <Stack screenOptions={{ contentStyle: styles.contentStyle, headerShown: false }}>
         <Stack.Screen name="(app)" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" />
+        <Stack.Screen name="learn" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </AppProvider>
