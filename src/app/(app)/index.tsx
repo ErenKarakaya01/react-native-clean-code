@@ -18,7 +18,7 @@ export default function HomeScreen() {
         }
       >
         
-        <View className="p-10 bg-red-700 flex items-center justify-center">
+        <View className="p-10 bg-red-700 flex items-center justify-center text-white">
           <Link href={"/learn/words/1"}>Words Carousel</Link>
         </View>
       </ParallaxScrollView>

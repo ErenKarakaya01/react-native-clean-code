@@ -8,13 +8,12 @@ type WordsCarouselProps = {
   words: Word[];
 };
 
+const width = Dimensions.get("window").width;
 const WordsCarousel = ({ words = [] }: WordsCarouselProps) => {
-  const width = Dimensions.get("window").width;
-
   return (
     <>
-      <Carousel
-        windowSize={10}
+      {/* <Carousel
+        windowSize={1}
         mode="parallax"
         style={{ flex: 1 }}
         modeConfig={{
@@ -23,9 +22,19 @@ const WordsCarousel = ({ words = [] }: WordsCarouselProps) => {
         }}
         pagingEnabled
         loop={false}
-        width={width}
+        width={200}
         data={words}
         scrollAnimationDuration={100}
+        renderItem={({ index }) => (<Text>{index}</Text>)}
+      /> */}
+      <Carousel
+        windowSize={3}
+        loop
+        width={width}
+        autoPlay={false}
+        data={words}
+        scrollAnimationDuration={700}
+        onSnapToItem={(index) => console.log("current index:", index)}
         renderItem={({ index }) => <WordCard word={words[index]} />}
       />
     </>

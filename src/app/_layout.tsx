@@ -41,7 +41,7 @@ const RootLayout = () => {
 
 const styles = StyleSheet.create({
   contentStyle: {
-    paddingTop: Platform.OS === OS.ANDROID ? 35 : 0,
+    //paddingTop: Platform.OS === OS.ANDROID ? 0 : 0,
     flex: 1,
     backgroundColor: "white"
   }

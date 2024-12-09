@@ -4,6 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import MainErrorFallback from "@/components/errors/main";
 import { queryConfig } from "@/lib/react-query";
 import { useReactQueryDevTools } from '@dev-plugins/react-query';
+import "../../global.css";
 
 type AppProviderProps = {
   children: React.ReactNode;
