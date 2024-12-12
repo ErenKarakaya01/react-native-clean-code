@@ -1,7 +1,7 @@
-import CategoriesList from "@/features/explore/components/categories-list";
+import CategoriesList from "@/features/discover/components/categories-list";
 import { View } from "react-native";
 
-export default function TabTwoScreen() {
+export default function DiscoverRoute() {
   return (
     <View className="flex-1">
       <CategoriesList />

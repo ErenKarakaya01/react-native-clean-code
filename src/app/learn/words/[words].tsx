@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import React from "react";
 import WordsCarousel from "@/features/learn/components/words-carousel";
-import { usePosts } from "@/features/explore/api/get-posts";
+import { usePosts } from "@/features/discover/api/get-posts";
 //import { useLocalSearchParams } from "expo-router";
 
 const WordsRoute = () => {
