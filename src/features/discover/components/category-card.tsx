@@ -11,12 +11,12 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ title, percentage, image }: CategoryCardProps) => {
   return (
-    <View className="flex justify-between flex-row my-2 w-full rounded-r-xl max-h-24 bg-white">
+    <View className="flex justify-between flex-row my-2 w-full rounded-xl max-h-24 bg-white">
       <Image
         source={{
           uri: image
         }}
-        className="aspect-square h-full"
+        className="aspect-square h-full rounded-l-xl"
       />
 
       <View className="flex flex-col items-start w-8/12 p-2 h-full justify-between">
