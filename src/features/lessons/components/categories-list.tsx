@@ -1,8 +1,7 @@
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import React from "react";
-import CategoryCard, { CategoryCardProps } from "./category-card";
+import CategoryCard from "./category-card";
 import { usePosts } from "../api/get-posts";
-import { List } from "react-native-paper";
 
 export type CategoriesListProps = {};
 
@@ -11,21 +10,25 @@ const CategoriesList = ({}: CategoriesListProps) => {
 
   const posts = postsQuery?.data;
   return (
-    <List.AccordionGroup>
+    <ScrollView className="px-8">
       {posts?.map((post) => (
         <CategoryCard
           key={post.id}
           id={post.id}
           title={post.title}
-          lessons={posts?.map((post) => ({
+          lessons={posts.splice(0, 5)?.map((post, index) => ({
             image: "https://picsum.photos/200",
             title: post.title,
             total: 10,
-            completed: 5
+            completed: 5,
+            index: index,
+            isLast: 5 - 1 === index
           }))}
+          percentage={100}
+          image="https://picsum.photos/200"
         />
       ))}
-    </List.AccordionGroup>
+    </ScrollView>
   );
 };
 
